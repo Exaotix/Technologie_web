@@ -1,4 +1,3 @@
 # Technologie_web
 
-Nom : THIEBAUT
-Prénom : Eric
+Nom : THIEBAUT Eric
