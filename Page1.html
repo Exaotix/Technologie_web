@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
         <title>Page 1</title>
     </head>
 
@@ -9,6 +10,23 @@
     	<p><h1>RESERVATION</h1></p>
     	<p>Le prix de la place est de 10 euros jusqu'à 12 ans et ensuite de 15 euros.</p>
     	<p>Le prix de l'assurance annulation est de 20 euros quel que soit le nombre de voyageurs.</p>
+
+    	<p>
+    		<label for="destination">Destination</label>
+    		<select name="destination" id="destination">
+    			<option value="france">France</option>
+    			<option value="espagne">Espagne</option>
+    			<option value="finlande">Finlande</option>
+    			<option value="belgique">Belgique</option>
+    			<option value="allemagne">Allemagne</option>
+    		</select>
+    	</p>
+    	<p>
+    		<label for="places">Nombre de places</label> : <input type="number" name="places" id="places" />
+    	</p>
+    	<p>
+    		<label for="assurance">Assurance annulation</label> : <input type="checkbox" name="assurance" id="assurance" />
+    	</p>
 
     	<p>Voici un lien pour accéder à la deuxième page : <a href="Page2.html">Page 2</a></p>
     </body>
