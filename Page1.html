@@ -11,14 +11,17 @@
     	<p>Le prix de la place est de 10 euros jusqu'à 12 ans et ensuite de 15 euros.</p>
     	<p>Le prix de l'assurance annulation est de 20 euros quel que soit le nombre de voyageurs.</p>
 
+<form method="post" action="traitement.php">
+
+    <fieldset>
     	<p>
     		<label for="destination">Destination</label>
     		<select name="destination" id="destination">
-    			<option value="france">France</option>
-    			<option value="espagne">Espagne</option>
-    			<option value="finlande">Finlande</option>
-    			<option value="belgique">Belgique</option>
-    			<option value="allemagne">Allemagne</option>
+    			<option value="lisbonne">Lisbonne</option>
+    			<option value="paris">Paris</option>
+    			<option value="madrid">Madrid</option>
+    			<option value="bruxelles">Bruxelles</option>
+    			<option value="berlin">Berlin</option>
     		</select>
     	</p>
     	<p>
@@ -27,6 +30,14 @@
     	<p>
     		<label for="assurance">Assurance annulation</label> : <input type="checkbox" name="assurance" id="assurance" />
     	</p>
+    </fieldset>
+
+    	<p>
+    		<input type="submit" value="Etape suivante" /> 
+    		<input type="reset" value="Annuler la réservation" />
+    	</p>
+
+</form>
 
     	<p>Voici un lien pour accéder à la deuxième page : <a href="Page2.html">Page 2</a></p>
     </body>
