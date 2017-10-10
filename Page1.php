@@ -1,44 +1,49 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
         <title>Page 1</title>
     </head>
 
+
+
     <body>
     	<p><h1>RESERVATION</h1></p>
     	<p>Le prix de la place est de 10 euros jusqu'à 12 ans et ensuite de 15 euros.</p>
     	<p>Le prix de l'assurance annulation est de 20 euros quel que soit le nombre de voyageurs.</p>
 
-<form method="post" action="traitement.php">
+<form method="post" action="Page2.php"> <!-- Formulaire -->
 
-    <fieldset>
-    	<p>
+    <fieldset> <!-- Cadre autour du formulaire -->
+    	<p> <!-- Liste déroulante destinations -->
     		<label for="destination">Destination</label>
     		<select name="destination" id="destination">
-    			<option value="lisbonne">Lisbonne</option>
-    			<option value="paris">Paris</option>
-    			<option value="madrid">Madrid</option>
-    			<option value="bruxelles">Bruxelles</option>
-    			<option value="berlin">Berlin</option>
+    			<option value="Lisbonne">Lisbonne</option>
+    			<option value="Paris">Paris</option>
+    			<option value="Madrid">Madrid</option>
+    			<option value="Bruxelles">Bruxelles</option>
+    			<option value="Berlin">Berlin</option>
     		</select>
     	</p>
-    	<p>
+    	<p> <!-- Petites flèches nbre de places -->
     		<label for="places">Nombre de places</label> <input type="number" name="places" id="places" />
-    	</p>
-    	<p>
+        </p>
+    	<p> <!-- Case à cocher assurance -->
     		<label for="assurance">Assurance annulation</label> <input type="checkbox" name="assurance" id="assurance" />
     	</p>
     </fieldset>
 
-    	<p>
-    		<input type="submit" value="Etape suivante" /> 
-    		<input type="reset" value="Annuler la réservation" />
+    	<p> <!-- Bouton de confirmation -->
+                <input type="submit" name="submit" value="Etape suivante" />
+            <!-- Bouton d'annulation : ça efface les champs -->
+                <input type="reset" name="reset" value="Annuler la réservation" />
     	</p>
 
 </form>
 
-    	<p>Voici un lien pour accéder à la deuxième page : <a href="Page2.html">Page 2</a></p>
     </body>
 </html>
