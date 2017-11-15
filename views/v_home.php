@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <title>Page 1</title>
+        <title>Home page</title>
     </head>
 
 
@@ -36,9 +36,9 @@
     </fieldset>
 
     	<p> <!-- Bouton de confirmation -->
-                <input type="submit" name="submit" value="Etape suivante" />
+                <input type="submit" value="Next step" />
             <!-- Bouton d'annulation : ça efface les champs -->
-                <input type="reset" name="reset" value="Annuler la réservation" />
+                <input type="reset" value="reset" />
     	</p>
 
 </form>

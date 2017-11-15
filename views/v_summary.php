@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <title>Page 3</title>
+        <title>Summary page</title>
     </head>
 
     <body>

@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <title>Page 2</title>
+        <title>Passengers page</title>
     </head>
 
     <body>
@@ -29,7 +29,7 @@
 	</fieldset>
 
 		<p>
-    		<input type="submit" value="Etape suivante" /> 
+    		<input type="submit" value="Next step" /> 
     		
     		<input type='button' value='Retour à la page précédente' onClick="Page1.php" />
 
