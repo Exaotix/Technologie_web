@@ -1,5 +1,4 @@
 <?php
 	
-	include 'views/v_home.php';
+	require 'views/v_home.php';
 	
-?>

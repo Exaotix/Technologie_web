@@ -1,36 +1,36 @@
 <?php
 
+		$mybooking->SetDestination($_POST['destination']);
 
-	$_SESSION['destination'] = $_POST['destination'];
-
-	if ($_POST['places'] > 0 && $_POST['places'] <= 9)
-	{
-    	$_SESSION['places'] = $_POST['places'];
-	}
-	else
-	{
-    	$_SESSION['places'] = "min 1 place, max 9 places";
-    	//Rajouter ici lien vers msg erreur
-	}
+		if ($_POST['places'] > 0 && $_POST['places'] <= 9)
+		{
+    		$mybooking->SetPlaces($_POST['places']);
+		}
+		else
+		{
+    		$error['places'] = TRUE;
+		}
                     
-	if (isset($_POST['assurance']))
-	{
-    	$_SESSION['assurance'] = "Oui";
-	}
-	else
-	{
-    	$_SESSION['assurance'] = "Non";
-	}
+		if (isset($_POST['insurance']))
+		{
+    		$mybooking->SetInsurance("Yes");
+		}
+		else
+		{
+    		$mybooking->SetInsurance("No");
+		}
 
 
-	//Boucle pour afficher plusieurs pages de passengers
-	for ($i = 1; $i <= $_SESSION['place']; $i++)
-	{
+
+		if (isset($error))
+		{
+			require 'views/v_home.php';
+		}
+		else
+		{
+			require 'views/v_passengers.php';
+		}
 		
-	}
+	
 
-
-	include 'views/v_passengers.php';
-
-?>
-
+	

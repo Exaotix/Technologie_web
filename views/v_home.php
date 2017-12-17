@@ -4,15 +4,13 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <title>Home page</title>
+        <title>Home</title>
     </head>
 
-
-
     <body>
-    	<p><h1>RESERVATION</h1></p>
-    	<p>Le prix de la place est de 10 euros jusqu'à 12 ans et ensuite de 15 euros.</p>
-    	<p>Le prix de l'assurance annulation est de 20 euros quel que soit le nombre de voyageurs.</p>
+    	<p><h1>BOOKING</h1></p>
+    	<p>The price is 10€ per place for children up to 12 year old. 15€ for others.</p>
+    	<p>The annulation insurance is 20€ regardless of the number of passengers.</p>
 
 <form method="post" action="index.php?page=passengers"> <!-- Formulaire -->
 
@@ -23,24 +21,30 @@
     			<option value="Lisbonne">Lisbonne</option>
     			<option value="Paris">Paris</option>
     			<option value="Madrid">Madrid</option>
-    			<option value="Bruxelles">Bruxelles</option>
+    			<option value="Brussels">Brussels</option>
     			<option value="Berlin">Berlin</option>
     		</select>
     	</p>
     	<p> <!-- Petites flèches nbre de places -->
-    		<label for="places">Nombre de places</label> <input type="number" name="places" id="places" />
+    		<label for="places">Number of places</label> <input type="number" name="places" id="places" />
+        </p>
+        <p>
+            <?php require 'views/v_error.php'; ?>
         </p>
     	<p> <!-- Case à cocher assurance -->
-    		<label for="assurance">Assurance annulation</label> <input type="checkbox" name="assurance" id="assurance" />
+    		<label for="insurance">Annulation insurance</label> <input type="checkbox" name="insurance" id="insurance" />
     	</p>
     </fieldset>
 
-    	<p> <!-- Bouton de confirmation -->
-                <input type="submit" value="Next step" />
-            <!-- Bouton d'annulation : ça efface les champs -->
-                <input type="reset" value="reset" />
+        <p> <!-- Bouton de confirmation -->
+            <input type="submit" value="Next" />
     	</p>
+</form>
 
+<form method="post" action="index.php?page=cancel">
+    <p>
+        <input type="submit" value="Cancel" />
+    </p>
 </form>
 
     </body>
