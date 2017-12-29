@@ -6,9 +6,9 @@
 		private $places;
 		private $insurance;
 		private $price;
-		private $passengers;
+		private $passengers = array();
 
-		public function __construct($destination="", $places=0, $insurance="", $price=0, $passengers=array())
+		public function __construct($destination, $places, $insurance, $price, $passengers)
 		{
 			$this->destination = $destination;
 			$this->places = $places;
@@ -47,7 +47,7 @@
 		public function GetPrice()
 		{
 			$price = 0;
-
+			
 			if(isset($this->passengers))
 			{
 				foreach ($this->passengers as $passengers)
@@ -66,7 +66,7 @@
 			{
 				$price += 20;
 			}
-
+			
 			return $price;
 		}
 		public function SetPrice($price)
@@ -92,3 +92,4 @@
 			$this->passengers = array ();
 		}
 	}
+

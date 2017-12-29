@@ -1,5 +1,5 @@
 <?php
-
+	
 if ((count($mybooking->GetPassengers()) < ($mybooking->GetPlaces() - 1)) && $mybooking->GetPlaces() != 0)
 {
 	if ($_POST['age'] >= 0 && $_POST['age'] <= 125)
@@ -13,14 +13,14 @@ if ((count($mybooking->GetPassengers()) < ($mybooking->GetPlaces() - 1)) && $myb
 		require 'views/v_passengers.php';
 	}
 
-
+		
 }
 else
 {
 	if ($_POST['age'] >= 0 && $_POST['age'] <= 125)
 	{
 		$mybooking->SetPassengers(new Passenger($_POST['lastname'], $_POST['firstname'], $_POST['age']));
-
+		
 		$_SESSION['noadult'] = TRUE;
 
 		for ($i = 0; $i < $mybooking->GetPlaces(); $i++)

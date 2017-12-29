@@ -5,15 +5,17 @@
 session_start();
 require 'model/booking.php';
 require 'model/passenger.php';
+//include 'public/style.css';
 
-//The booking is saved in a variable called $mybooking
+
+//The booking is saved in a variable called $thebooking
 if(isset($_SESSION['mybooking']))
 {
 	$mybooking = unserialize($_SESSION['mybooking']);
 }
 else
 {
-	$mybooking = new Booking();
+	$mybooking = new Booking("",0,"",0,array());
 }
 
 //Make the directions to the right views
