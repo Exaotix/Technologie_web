@@ -40,7 +40,7 @@
             echo "<tr><td>" . $booking->id . "</td>";
             echo "<td>" . $booking->destination . "</td>";
             echo "<td>" . $booking->insurance . "</td>";
-            echo "<td>" . $booking->total . "</td>";
+            echo "<td>" . $booking->total . " €</td>";
             echo "<td>" . implode(' & ', $person) . "</td>";
             echo "<td><a style='cursor: pointer' href='edit.php?id=" . $booking->id . "'>Edit</a></td>";
             echo "<td><a style='cursor: pointer' href='delete.php?id=" . $booking->id . "'>Delete</a></td>";
